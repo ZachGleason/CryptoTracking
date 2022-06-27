@@ -1,0 +1,35 @@
+.news-container {
+    margin-bottom: -340px;
+    background: none;
+    width: 100%;
+    text-align: center;
+    margin-left: 10px;
+    overflow: scroll;
+}
+
+.news-title {
+    color: White;
+    width: 100%;
+    font-size: 25px;
+    justify-content: center;
+}
+
+.news-headline {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.news-article {
+    text-decoration: none;
+    text-align: center;
+}
+
+.news-information {
+   height: 130px;
+   width: 100%;
+}
+
+.line-break {
+    margin-bottom: 10px;
+}
