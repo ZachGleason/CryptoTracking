@@ -7,10 +7,10 @@ import News from "./Components/News";
 
 const options = {
   method: 'GET',
-  url: 'https://crypto-news16.p.rapidapi.com/news/top/5',
+  url: 'https://last-crypto-news.p.rapidapi.com/cryptonews',
   headers: {
     'X-RapidAPI-Key': '06cdb30582msh3025854541126a3p139367jsna2d846a7285d',
-    'X-RapidAPI-Host': 'crypto-news16.p.rapidapi.com'
+    'X-RapidAPI-Host': 'last-crypto-news.p.rapidapi.com'
   }
 };
 
@@ -18,17 +18,13 @@ function App() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   const [information, setInformation]= useState([]);
-
-
-  useEffect(() => {
-    axios.request(options).then(function (response) {
-      setInformation(response.data)
-
-    }).catch(function (error) {
-        console.error(error);
-    });
-})
-
+ 
+  // axios.request(options).then(function (response) {
+  //   setInformation(response.data)
+  //   console.log(information);
+  // }).catch(function (error) {
+  //   console.error(error);
+  // });
 
   useEffect(() => {
     axios
@@ -81,9 +77,9 @@ function App() {
       </div>
       <div>
         <div className="news-section">
-          <h1 className="news-headline">Crypto News</h1>
+          <h1 className="news-headline">Crypto News Daily</h1>
         </div>
-        {information.map((data) => {
+        {/* {information.map((data) => {
           return (
             <News 
               key={data.id} 
@@ -93,7 +89,7 @@ function App() {
               date={data.date}
             />
           );
-        })}
+        })} */}
       </div>
     </div>
   );
